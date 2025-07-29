@@ -13,61 +13,43 @@ MODEL_CONFIG = {
 INSTRUCT_CONFIG = {
     "0_1_b": {
         "lr": 0.0001,
-        "distributed": "ddp",
-        "gpu_count": 1,
-        "batch_size": 140,
+        "batch_size": 100,
         "use_lora": False
     },
     "1_2_b": {
         "lr": 0.0001,
-        "distributed": "ddp",
-        "gpu_count": 1,
         "use_lora": False,
-        "batch_size": 100,
+        "batch_size": 80,
     },
     "2_4_b": {
         "lr": 8e-5,
-        "distributed": "ddp",
-        "gpu_count": 1,
         "batch_size": 48,
     },
     "4_5_b": {
         "lr": 6e-5,
-        "distributed": "ddp",
-        "gpu_count": 2,
         "batch_size": 40,
     },
     "5_9_b": {
         "lr": 4e-5,
-        "distributed": "ddp",
-        "gpu_count": 2,
         "batch_size": 30,
     },
     "9_12_b": {
         "lr": 0.00015,
-        "distributed": "ddp",
-        "gpu_count": 2,
         "use_lora": True,
         "batch_size": 32,
     },
     "12_15_b": {
         "lr": 0.0001,
-        "distributed": "ddp",
-        "gpu_count": 4,
         "use_lora": True,
         "batch_size": 20,
     },
     "15_40_b": {
         "lr": 8e-5,
-        "distributed": "ds",
-        "gpu_count": 4,
         "use_lora": True,
         "batch_size": 10,
     },
     "40_80_b": {
         "lr": 6e-5,
-        "distributed": "ds",
-        "gpu_count": 8,
         "use_lora": True,
         "batch_size": 6,
     }        
@@ -100,8 +82,6 @@ def get_instruct_config(param_nums: int) -> dict:
         print(f"Model size {param_nums} is not supported")
         return {
             "lr": 4e-5,
-            "distributed": "ds",
-            "gpu_count": 8,
             "batch_size": 6,
             "use_lora": True
         }
