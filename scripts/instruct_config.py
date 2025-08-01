@@ -13,40 +13,40 @@ MODEL_CONFIG = {
 INSTRUCT_CONFIG = {
     "0_1_b": {
         "lr": 0.0001,
-        "batch_size": 100,
+        "batch_size": 64,
         "use_lora": False
     },
     "1_2_b": {
         "lr": 0.0001,
         "use_lora": False,
-        "batch_size": 80,
+        "batch_size": 64,
     },
     "2_4_b": {
         "lr": 8e-5,
-        "batch_size": 48,
+        "batch_size": 32,
     },
     "4_5_b": {
         "lr": 6e-5,
-        "batch_size": 40,
+        "batch_size": 32,
     },
     "5_9_b": {
         "lr": 4e-5,
-        "batch_size": 30,
+        "batch_size": 16,
     },
     "9_12_b": {
         "lr": 0.00015,
         "use_lora": True,
-        "batch_size": 32,
+        "batch_size": 16,
     },
     "12_15_b": {
         "lr": 0.0001,
         "use_lora": True,
-        "batch_size": 20,
+        "batch_size": 10,
     },
     "15_40_b": {
         "lr": 8e-5,
         "use_lora": True,
-        "batch_size": 10,
+        "batch_size": 8,
     },
     "40_80_b": {
         "lr": 6e-5,
